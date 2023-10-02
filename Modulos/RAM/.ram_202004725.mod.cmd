@@ -1,0 +1,1 @@
+cmd_/home/yeinny/Documents/GitHub/so1_proyecto1_2S2023_202004725/Modulos/RAM/ram_202004725.mod := printf '%s\n'   ram_202004725.o | awk '!x[$$0]++ { print("/home/yeinny/Documents/GitHub/so1_proyecto1_2S2023_202004725/Modulos/RAM/"$$0) }' > /home/yeinny/Documents/GitHub/so1_proyecto1_2S2023_202004725/Modulos/RAM/ram_202004725.mod
