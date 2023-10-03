@@ -19,7 +19,7 @@ export const Home = () => {
     const { data } = useQuery("cpu", async () => {
         const { data } = await axios.post(
             'http://localhost:3000/so1/buscarCpu', {
-            "ip": "127.0.0.1"
+            "ip": "35.232.81.75"
         }
         );
         return data;
@@ -32,7 +32,7 @@ export const Home = () => {
     const { data: ram } = useQuery("ram", async () => {
         const { data } = await axios.post(
             'http://localhost:3000/so1/buscarRam', {
-            "ip": "127.0.0.1"
+            "ip": "35.232.81.75"
         }
         );
         return data;
@@ -45,7 +45,7 @@ export const Home = () => {
     const { data:info } = useQuery("info", async () => {
         const { data } = await axios.post(
             'http://localhost:3000/so1/buscarProcesos', {
-            "ip": "127.0.0.1"
+            "ip": "35.232.81.75"
         }
         );
         return data;
@@ -276,7 +276,7 @@ export const Home = () => {
     const borrarHijoProc = async (proc) => {
         const { data } = await axios.post(
             'http://localhost:3000/so1/kill', {
-            "ip": "127.0.0.1",
+            "ip": "35.232.81.75",
             "pid": proc.PID
         }
         );
@@ -286,7 +286,7 @@ export const Home = () => {
     const borrarProceso = async (proc) => {
         const { data } = await axios.post(
             'http://localhost:3000/so1/kill', {
-            "ip": "127.0.0.1",
+            "ip": "35.232.81.75",
             "pid": proc.PID_PROC
         }
         );

@@ -1,0 +1,26 @@
+version: '3.8'
+services:
+  mysqldb:
+    image: mysql
+    container_name: mysqldb
+    environment:
+      - MYSQL_ROOT_PASSWORD=ktalan30
+      - MYSQL_DATABASE=so1p1
+    ports:
+      - "3307:3306"
+    volumes:
+      - /home/yeinny/Documents/UNIVERSIDAD/SEPTIMOSEMESTRE/DataBase:/var/lib/mysql
+  api-node:
+    depends_on:
+      - mysqldb
+    container_name: api-node
+    build: ./API-Node
+    ports:
+      - 3000:3000
+    image: api-node
+    environment:
+      DB_HOST: mysqldb
+      DB_PORT: 3306
+      DB_USER: root
+      DB_PASSWORD: ktalan30
+      DB_NAME: so1p1

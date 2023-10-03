@@ -5,7 +5,6 @@ import (
 	"encoding/json"
 	"fmt"
 	"io"
-	"io/ioutil"
 	"log"
 	"net/http"
 	"os"
@@ -146,20 +145,6 @@ func cpuUso(w http.ResponseWriter, _ *http.Request) {
 	}
 	w.Write(jsonResp)
 	return
-}
-
-func mandarIp() {
-	response, err := http.Get("http://localhost:3000/")
-
-	if err != nil {
-		fmt.Print(err.Error())
-	}
-
-	responseData, err := ioutil.ReadAll(response.Body)
-	if err != nil {
-		log.Fatal(err)
-	}
-	fmt.Println(string(responseData))
 }
 
 func kill(w http.ResponseWriter, r *http.Request) {
