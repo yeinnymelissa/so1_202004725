@@ -29,7 +29,6 @@ export const Historial = () => {
                 arregloCpu.push(element.PORCENTAJE)
             });
 
-            console.log(arregloCpu);
             const data = {
                 labels: ['', '', '', '', '', '', '', '', '', '', '', '', '', ''],
                 datasets: [
@@ -89,8 +88,6 @@ export const Historial = () => {
             response.data.forEach(element => {
                 arregloRam.push(element.PORCENTAJE)
             });
-
-            console.log(arregloRam);
 
 
             const dataRam = {

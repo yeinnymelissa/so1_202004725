@@ -60,7 +60,7 @@ export const Home = () => {
         global: { value: null, matchMode: FilterMatchMode.CONTAINS }
     });
 
-    const porcentajeRam = ram?.PORCENTAJE || 100
+    const porcentajeRam = ram[0]?.PORCENTAJE || 100
 
     const chartDataRam = {
         labels: ['En uso', 'Libre'],
@@ -96,7 +96,7 @@ export const Home = () => {
         }
     });
 
-    const porcentaje = data?.PORCENTAJE || 100
+    const porcentaje = data[0]?.PORCENTAJE || 100
 
     const chartDataCpu = {
         labels: ['En uso', 'Libre'],
